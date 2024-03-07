@@ -1,0 +1,1 @@
+La parte di scelta manuale dell'utente è funzionante ma mancano alcuni controlli, la parte in cui c'è la scelta randomica è stata iniziata ma ancora incopleta
