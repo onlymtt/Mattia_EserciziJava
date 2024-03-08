@@ -1,1 +1,10 @@
-La parte di scelta manuale dell'utente è funzionante ma mancano alcuni controlli, la parte in cui c'è la scelta randomica è stata iniziata ma ancora incopleta
+Per gli ingredienti base utilizzo 4 arraylist per dare la possibilità di implementare una funzionalità in cui l'utente aggiunge manualmente ingrendienti che non sono già presenti. Il dolce finale è anche lui un arraylist dato che deve contenere 
+più di un ingrediente
+
+Il menù a scelta è realizzato con un do-while per far sì che il programma non termini quando si compone il dolce finale ma si dia la possibilità di tornare all'inizio del menù e comporne ancora
+
+Problema: al momento, se si sceglie un ingrediente non presente nelle liste, il software segnala il problema ma non gestisce il problema e poi alla fine compone un dolce con meno ingredienti rispetto ai 4 previsti
+
+Per la modalità automatica userò la funzione random, ma questa parte è ancora in sviluppo
+
+l'output finale utilizza un ciclo for per ciclare gli ingredienti del dolce e li stampa a video
