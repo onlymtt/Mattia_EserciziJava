@@ -7,6 +7,7 @@ public class EsercizioStadio {
 
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
+        int input;
         
         ArrayList<Integer> spettatoriSabato = new ArrayList<>();
         ArrayList<Integer> spettatoriDomenica = new ArrayList<>();
@@ -28,17 +29,23 @@ public class EsercizioStadio {
             totIncasso +=incassoDomenica;
         }
 
+        do {
+            System.out.println("Scegli un'opzione: \n1. Incasso totale \n2. Minimo spettatori \n3. Massimo spettatori");
+            input = sc.nextInt();
+    
+            switch (input) {
+                case 1:
+                    System.out.println("Incasso totale " + totIncasso);
+                    break;
 
-        System.out.println("Scegli un'opzione: \n1.Incasso totale");
-        int input = sc.nextInt();
-
-        switch (input) {
-            case 1:
-                System.out.println("Incasso totale " + totIncasso);
-                break;
-        
-            default:
-                break;
+                case 2:
+                    System.out.println("Il minimo degli spettaori di sabato è: " + spettatoriSabato);
+                    break;
+            
+                default:
+                    break;
         }
+        
+    }while(input != 0);
     }
 }
