@@ -17,10 +17,10 @@ public class EsercizioMatematica {
 
                 System.out.println("\nVuoi calcolare? ");
                 inputStr = sc.nextLine();
-                if (inputStr.equals("no")) {
+                if (inputStr.equalsIgnoreCase("no")) {
                     System.out.println("Hai calcolato " + i + " volte");
                     break;
-                } else {
+                } else if (inputStr.equalsIgnoreCase("sì")) {
                 
                 System.out.println("Digita 1 per la somma, 2 per la sottrazione, 3 per il prodotto, 4 per il quoziente, qualsiasi altro numero per uscire\n");
                 input = scint.nextInt();
