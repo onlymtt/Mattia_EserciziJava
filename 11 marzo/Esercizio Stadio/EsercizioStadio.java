@@ -40,13 +40,14 @@ public class EsercizioStadio {
             input = sc.nextInt();
     
             switch (input) {
+                //Incassi totali
                 case 1:
 
                     System.out.println("Incasso totale " + totIncasso);
                     break;
 
                 case 2:
-
+                    //minimo numero di spettatori
                     int minSpettatori = Collections.min(spettatoriSabato);
                     System.out.println("Il minimo degli spettatori del sabato è " + minSpettatori);
                     minSpettatori = Collections.min(spettatoriDomenica);
@@ -54,7 +55,7 @@ public class EsercizioStadio {
                     break;
 
                 case 3:
-
+                    //massimo numero di spettatori
                     int maxSpettatori = Collections.max(spettatoriSabato);
                     System.out.println("Il massimo degli spettatori del sabato è " + maxSpettatori);
                     maxSpettatori = Collections.max(spettatoriDomenica);
