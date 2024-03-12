@@ -16,9 +16,11 @@ public class EsercizioStadio {
         ArrayList<Integer> spettatoriSabato = new ArrayList<>();
         ArrayList<Integer> spettatoriDomenica = new ArrayList<>();
 
+        int numWeekEnd = random.nextInt(4)+1;
+
         int totIncasso = 0;
         //Incasso Sabato
-        for (int i = 0; i< 11; i++) {
+        for (int i = 0; i<= numWeekEnd; i++) {
             int numSpettatoriSabato = random.nextInt(10001);
             spettatoriSabato.add(numSpettatoriSabato);
             int incassoSabato = numSpettatoriSabato * 20;
@@ -27,7 +29,7 @@ public class EsercizioStadio {
         }
 
         //Incasso domenica
-        for (int i = 0; i< 11; i++) {
+        for (int i = 0; i< numWeekEnd; i++) {
             int numSpettatoriDomenica = random.nextInt(10001);
             spettatoriDomenica.add(numSpettatoriDomenica);
             int incassoDomenica = numSpettatoriDomenica * 15;
