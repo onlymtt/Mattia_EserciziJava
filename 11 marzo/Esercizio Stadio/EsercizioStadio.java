@@ -18,13 +18,13 @@ public class EsercizioStadio {
 
     int numSpettatoriSabato, numSpettatoriDomenica;
     
-
+    //metodo per calcolare l'incasso
     public void calcolaIncasso() {
         for (int i = 0; i<= numWeekEnd; i++) {
             numSpettatoriSabato = random.nextInt(10001);
             numSpettatoriDomenica = random.nextInt(10001);
 
-          /*   spettatoriSabato.add(numSpettatoriSabato);
+          /*spettatoriSabato.add(numSpettatoriSabato);
             spettatoriDomenica.add(numSpettatoriDomenica); */
 
             int incassoSabato = numSpettatoriSabato * 20;
@@ -35,6 +35,7 @@ public class EsercizioStadio {
         }
     }
 
+    //metodo per riempire gli array degli spettatori nei weekend
     public void riempiWeekend() {
             spettatoriSabato.add(numSpettatoriSabato);
             spettatoriDomenica.add(numSpettatoriDomenica);
@@ -50,6 +51,7 @@ public class EsercizioStadio {
         
         //Incasso Sabato e Domenica
         stadio.calcolaIncasso();
+
         //riempio gli array con gli spettatori dei vari weekend
         stadio.riempiWeekend();
 
