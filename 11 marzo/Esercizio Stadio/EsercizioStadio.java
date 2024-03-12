@@ -1,13 +1,17 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
 public class EsercizioStadio {
+
+    
     public static void main(String[] args) {
 
         Random random = new Random();
         Scanner sc = new Scanner(System.in);
         int input;
+        int id = 0;
         
         ArrayList<Integer> spettatoriSabato = new ArrayList<>();
         ArrayList<Integer> spettatoriDomenica = new ArrayList<>();
@@ -19,6 +23,7 @@ public class EsercizioStadio {
             spettatoriSabato.add(numSpettatoriSabato);
             int incassoSabato = numSpettatoriSabato * 20;
             totIncasso +=incassoSabato;
+            id = numSpettatoriSabato - 1;
         }
 
         //Incasso domenica
@@ -27,19 +32,33 @@ public class EsercizioStadio {
             spettatoriDomenica.add(numSpettatoriDomenica);
             int incassoDomenica = numSpettatoriDomenica * 15;
             totIncasso +=incassoDomenica;
+            id = numSpettatoriDomenica -1;
         }
-
+        //Menù con le varie scelte
         do {
-            System.out.println("Scegli un'opzione: \n1. Incasso totale \n2. Minimo spettatori \n3. Massimo spettatori");
+            System.out.println("\nScegli un'opzione: \n1. Incasso totale \n2. Minimo spettatori \n3. Massimo spettatori \n0. Per uscire");
             input = sc.nextInt();
     
             switch (input) {
                 case 1:
+
                     System.out.println("Incasso totale " + totIncasso);
                     break;
 
                 case 2:
-                    System.out.println("Il minimo degli spettaori di sabato è: " + spettatoriSabato);
+
+                    int minSpettatori = Collections.min(spettatoriSabato);
+                    System.out.println("Il minimo degli spettatori del sabato è " + minSpettatori);
+                    minSpettatori = Collections.min(spettatoriDomenica);
+                    System.out.println("Il minimo degli spettatori della domenica è " + minSpettatori);
+                    break;
+
+                case 3:
+
+                    int maxSpettatori = Collections.max(spettatoriSabato);
+                    System.out.println("Il massimo degli spettatori del sabato è " + maxSpettatori);
+                    maxSpettatori = Collections.max(spettatoriDomenica);
+                    System.out.println("Il massimo degli spettatori della domenica è " + maxSpettatori);
                     break;
             
                 default:
