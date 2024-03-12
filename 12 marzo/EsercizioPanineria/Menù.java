@@ -63,7 +63,7 @@ public class Menù {
         } else {
             System.out.println("Questo ingrediente non è nella lista");
         }
-
+        //il calcolo del prezzo totale non è corretto
         prezzoTotale = listaTipoPane.indexOf(input) + listaIngredienti.indexOf(inputIngr);
         PiattoSpeciale piattoSpeciale = new PiattoSpeciale(input, inputIngr, prezzoTotale);
         
