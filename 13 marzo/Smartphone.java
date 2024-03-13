@@ -1,16 +1,17 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Smartphone extends DispositivoElettronico {
 
-    private String nomeUtente;
-    private String password;
+    private ArrayList nomiUtente = new ArrayList<>();
+    private ArrayList passwords = new ArrayList<>();
 
 
 
-    public Smartphone(String nomeUtente, String password) {
-        this.nomeUtente = nomeUtente;
-        this.password = password;
-    }
+  /*  public Smartphone(String nomeUtente, String password) {
+        this.nomiUtente.add(nomeUtente);
+        this.passwords.add(password);
+    } */
     
     @Override
     public void avviaApplicazione(String nomeApp) {
@@ -26,9 +27,8 @@ public class Smartphone extends DispositivoElettronico {
 
         System.out.println("Inserisci la password");
         String inputPassword = sc.nextLine();
-         this.nomeUtente = inputNome; 
-         this.password = inputPassword;
-
+         this.nomiUtente.add(inputNome);
+         this.passwords.add(inputPassword);
     }
     
 }
