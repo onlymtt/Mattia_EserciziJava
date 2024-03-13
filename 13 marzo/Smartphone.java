@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Smartphone extends DispositivoElettronico {
 
-    private ArrayList nomiUtente = new ArrayList<>();
-    private ArrayList passwords = new ArrayList<>();
+    private ArrayList<String> nomiUtente = new ArrayList<>();
+    private ArrayList<String> passwords = new ArrayList<>();
 
 
 
@@ -13,6 +13,7 @@ public class Smartphone extends DispositivoElettronico {
         this.passwords.add(password);
     } */
     
+    //Avvio applicazione
     @Override
     public void avviaApplicazione(String nomeApp) {
         
@@ -20,6 +21,7 @@ public class Smartphone extends DispositivoElettronico {
         loginUtente();
     }
 
+    //login
     private void loginUtente() {
         System.out.println("\nInserisci nome utente");
         Scanner sc = new Scanner(System.in);
@@ -30,5 +32,16 @@ public class Smartphone extends DispositivoElettronico {
          this.nomiUtente.add(inputNome);
          this.passwords.add(inputPassword);
     }
+
+    //metodi getter
+    public ArrayList getNomiUtente() {
+        return nomiUtente;
+    }
+
+    public ArrayList getPasswords() {
+        return passwords;
+    }
+
+    
     
 }
