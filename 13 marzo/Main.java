@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         
-
+        
        int cond;
        Scanner sc = new Scanner(System.in);
-       int inputMenu = sc.nextInt();
+       int inputMenu;
        DispositivoElettronico dispositivo = new DispositivoElettronico();
        Smartphone smartphone = new Smartphone();
        Tablet tablet = new Tablet(0);
@@ -16,6 +16,7 @@ public class Main {
        do {
         //inizio menù
        System.out.println("1. Avvia applicazione, 2. Esci");
+       inputMenu = sc.nextInt();
        dispositivo.avviaApplicazione("Resoconto");
        smartphone.avviaApplicazione(dispositivo.getNomeApp());
        tablet.avviaApplicazione(dispositivo.getNomeApp());
