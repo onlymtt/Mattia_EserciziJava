@@ -6,22 +6,23 @@ public class Main {
 
        int cond;
        Scanner sc = new Scanner(System.in);
-       int inputMenù = sc.nextInt();
+       int inputMenu = sc.nextInt();
        DispositivoElettronico dispositivo = new DispositivoElettronico();
        Smartphone smartphone = new Smartphone();
        Tablet tablet = new Tablet(0);
        int count = 0;
-
+        //stampa di prova per debug
+       System.out.println("Prova");
        do {
-        
+        //inizio menù
        System.out.println("1. Avvia applicazione, 2. Esci");
        dispositivo.avviaApplicazione("Resoconto");
        smartphone.avviaApplicazione(dispositivo.getNomeApp());
        tablet.avviaApplicazione(dispositivo.getNomeApp());
        ResocontoDigitale resoconto = new ResocontoDigitale();
       //String nome = smartphone.getNomiUtente().get(count).toString();
-      // resoconto.stampaResoconto(smartphone.getNomiUtente().get(count), smartphone.getPasswords().get(count), tablet.getPunti(), tablet.getId());
+      resoconto.stampaResoconto(smartphone, tablet, count);
         count++;
-    }while(inputMenù != 2);
+    }while(inputMenu != 2);
 }
 }
