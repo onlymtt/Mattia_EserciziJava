@@ -23,14 +23,21 @@ public class Smartphone extends DispositivoElettronico {
 
     //login
     private void loginUtente() {
+        boolean cond = false;
         System.out.println("\nInserisci nome utente");
         Scanner sc = new Scanner(System.in);
         String inputNome = sc.nextLine();
 
-        System.out.println("Inserisci la password");
-        String inputPassword = sc.nextLine();
-         this.nomiUtente.add(inputNome);
-         this.passwords.add(inputPassword);
+        if (!(this.nomiUtente.contains(inputNome))) {
+            System.out.println("Inserisci la password");
+            String inputPassword = sc.nextLine();
+             this.nomiUtente.add(inputNome);
+             this.passwords.add(inputPassword);
+        } else {
+            System.out.println("Questo utente è già registrato!");
+        }
+
+        
     }
 
     //metodi getter

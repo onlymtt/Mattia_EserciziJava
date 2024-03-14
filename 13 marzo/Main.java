@@ -9,7 +9,7 @@ public class Main {
        int inputMenu;
        DispositivoElettronico dispositivo = new DispositivoElettronico();
        Smartphone smartphone = new Smartphone();
-       Tablet tablet = new Tablet(0);
+       Tablet tablet = new Tablet();
        int count = 0;
         //stampa di prova per debug
        System.out.println("Prova");
