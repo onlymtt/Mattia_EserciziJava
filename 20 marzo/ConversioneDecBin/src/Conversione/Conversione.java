@@ -14,14 +14,14 @@ public class Conversione {
         int input = scanner.nextInt();
         
         
-        do {
+        while(input > 0) {
         resto = input % 2;
         
         input = input / 2;;
         
         builder.insert(0, resto);
         
-        }while(input > 0);
+        }
         
         binary = builder.toString();
         System.out.println("Il binario è " + binary);
