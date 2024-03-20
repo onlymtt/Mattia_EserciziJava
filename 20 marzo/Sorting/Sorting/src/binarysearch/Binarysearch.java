@@ -20,6 +20,7 @@ public class Binarysearch {
 	}
 	
 	/**
+	 * metodo per la ricerca binaria
 	 * @param array; array in cui cercare il valore che mi interessa
 	 * @param var; variabile contenente il numero che voglio cercare nell'array
 	 * @return mid; indice del valore cercato o -1 se non trova niente*/
