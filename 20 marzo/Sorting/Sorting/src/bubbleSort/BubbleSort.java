@@ -9,9 +9,14 @@ package bubbleSort;
  * */
 
 import java.util.LinkedList;
-
+/**
+ * Classe del bubble sort*/
 public class BubbleSort {
-
+	/**
+	 * entrypoint
+	 * 
+	 * @param args; argomenti che si passano dalla riga di comando al metodo main
+	 * */
 	public static void main(String[] args) {
 
 		
@@ -36,6 +41,7 @@ public class BubbleSort {
 
 	/**
 	 * @param linkedList; una linkedList di interi da passare al metodo
+	 * 
 	 * */
 	public static void bubbleSort(LinkedList<Integer> linkedList) {
 		for (int i = 0; i < linkedList.size()-1; i++) {
