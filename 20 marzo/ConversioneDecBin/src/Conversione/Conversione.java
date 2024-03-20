@@ -17,7 +17,7 @@ public class Conversione {
         while(input > 0) {
         resto = input % 2;
         
-        input = input / 2;;
+        input = input / 2;
         
         builder.insert(0, resto);
         
