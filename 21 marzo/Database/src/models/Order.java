@@ -50,6 +50,8 @@ public class Order {
 	 * @param orderNumber numero dell'ordine*/
 	public void setOrderNumber(String orderNumber) {
 		this.orderNumber = orderNumber;
+		update("order_number", this.orderNumber);
+		
 	}
 
 	/**
@@ -92,6 +94,18 @@ public class Order {
 	public void setTotalPrice(double totalPrice) {
 		this.totalPrice = totalPrice;
 	}
+
+	@Override
+	public String toString() {
+		return "Order [orderNumber=" + orderNumber + ", today=" + today + ", quantity=" + quantity + ", totalPrice="
+				+ totalPrice + "]";
+	}
+	
+	public void update(String campoDb, String newValue) {
+		
+	}
+	
+	
 	
 	
 	

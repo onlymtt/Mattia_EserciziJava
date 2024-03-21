@@ -12,7 +12,6 @@ public class Main {
 		// TODO Auto-generated method stub
 		Database db = new Database();
 		db.test();
-		System.out.println("\nProva");
 	}
 
 }

@@ -15,6 +15,7 @@ public class Database {
 
 	private Connection connection;
 	private Statement stmt;
+	ArrayList<Order> orders = new ArrayList<>();
 	
 	/**
 	 * Costruttore della classe Database
@@ -33,17 +34,10 @@ public class Database {
 			//	+ "VALUES (\"CD12345678\", now(), 18, 12.34, \"IN ATTESA\");");
 		ResultSet rs = this.stmt.executeQuery("SELECT order_number, today, quantity, total_price FROM orders");
 		
-	/*	while (rs.next()) {
-			System.out.println(rs.getString("order_number"));
-			System.out.println(rs.getDate("today"));
-			System.out.println(rs.getInt("quantity"));
-			System.out.println(rs.getInt("total_price"));
-			
-		} */
 		
 		//int riga = this.stmt.executeUpdate("UPDATE orders" + " SET quantity = 20, total_price= 15.59" + " WHERE id=2");
 		//System.out.println("Numero di righe modificate: " + riga);
-		ArrayList<Order> orders = new ArrayList<>();
+		
 		
 		while (rs.next()) {
 			orders.add(new Order(rs.getString("order_number"), 
@@ -58,10 +52,7 @@ public class Database {
 		while(it.hasNext()) {
 			Order order = it.next();
 			
-			System.out.println(order.getOrderNumber());
-			System.out.println(order.getToday());
-			System.out.println(order.getQuantity());
-			System.out.println(order.getTotalPrice() + "\n");
+			System.out.println(order.toString() + "\n");
 		}
 		
 	}
