@@ -3,14 +3,13 @@ package area_triangolo;
 public class Triangolo {
 	private int base;
 	private int altezza;
-	private int area;
 	
 	
-	public Triangolo(int base, int altezza) {
+	private AreaInterface area;
+	
+	public Triangolo( AreaInterface area) {
 		super();
-		this.base = base;
-		this.altezza = altezza;
-		//this.area = area;
+		this.area = area;
 	}
 
 
@@ -34,14 +33,11 @@ public class Triangolo {
 	}
 
 
-	public int getArea() {
-		return area;
+	public int calcola() {
+		
+		return this.area.calcolaArea();
 	}
 
-
-	public void setArea(int area) {
-		this.area = area;
-	}
 	
 	
 	
