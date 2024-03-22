@@ -10,20 +10,19 @@ public class AreaFile implements AreaInterface {
 	public double calcolaArea() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("testo.txt"));
-		
-			
-			
-				String line = reader.readLine();
-	            double numero1 = Double.parseDouble(line);
-	            
-
-	            line = reader.readLine();
-	            double numero2 = Double.parseDouble(line);
+				double[] baseAltezza = new double[2];
+				int i = 0;
+				String line;
 				
+				while((line = reader.readLine()) != null && i < 2) {
+					
+					baseAltezza[i] = Double.parseDouble(line);
+					i++;
+				}
 	            
 	            reader.close();
 	            System.out.println("Area calcolata da file");
-			return (numero1 * numero2)/2;
+			return (baseAltezza[0] * baseAltezza[1])/2;
 		}catch(IOException e) {
 			System.out.println("Errore nella lettura");
 		}
