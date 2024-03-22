@@ -1,14 +1,20 @@
 package file;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class ManipolazioneFile {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		creaFile();
-		verificaEsistenzaFile();
+		//creaFile();
+		//verificaEsistenzaFile();
+		//inserisciTesto();
+		eliminaFile();
 		}
 
 	public static void creaFile() {
@@ -39,9 +45,47 @@ public class ManipolazioneFile {
 		}
 	}
 	
+	public static void leggiFile() {
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("testo.txt"));
+			String linea;
+			
+			while((linea = reader.readLine()) != null) {
+				System.out.println(linea);
+			}
+			reader.close();
+		}catch(IOException e) {
+			System.out.println("Errore nella lettura");
+		}
+	}
 	
+	public static void inserisciTesto() {
+		
+		File fileDiTesto = new File("testo.txt");
+		try {
+			BufferedWriter w = new BufferedWriter(new FileWriter("testo.txt"));
+			w.write("\r\nTesto aggiunto ora");
+			
+			w.close();
+			
+			System.out.println("Testo aggiunto");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
-	
+	public static void eliminaFile() {
+		File f = new File("testo.txt");
+		
+		boolean risposta = f.delete();
+		
+		if (risposta == true) {
+			System.out.println("File eliminato");
+		} else {
+			System.out.println("File non eliminato");
+		}
+	}
 	
 	
 	
