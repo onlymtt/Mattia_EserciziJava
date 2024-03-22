@@ -12,8 +12,6 @@ public class Triangolo {
 	}
 
 
-
-
 	public double calcola() {
 		
 		return this.area.calcolaArea();
