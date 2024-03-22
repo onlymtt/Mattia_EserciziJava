@@ -14,7 +14,7 @@ import models.Order;
 public class Database {
 
 	private Connection connection;
-	private Statement stmt;
+	public Statement stmt;
 	ArrayList<Order> orders = new ArrayList<>();
 	
 	/**
@@ -32,7 +32,7 @@ public class Database {
 	public void test() throws SQLException {
 		//int riga = this.stmt.executeUpdate("INSERT INTO orders (order_number, today, quantity, total_price, order_state)\r\n"
 			//	+ "VALUES (\"CD12345678\", now(), 18, 12.34, \"IN ATTESA\");");
-		ResultSet rs = this.stmt.executeQuery("SELECT order_number, today, quantity, total_price FROM orders");
+		ResultSet rs = this.stmt.executeQuery("SELECT id, order_number, today, quantity, total_price FROM orders");
 		
 		
 		//int riga = this.stmt.executeUpdate("UPDATE orders" + " SET quantity = 20, total_price= 15.59" + " WHERE id=2");
@@ -40,7 +40,8 @@ public class Database {
 		
 		
 		while (rs.next()) {
-			orders.add(new Order(rs.getString("order_number"), 
+			orders.add(new Order(rs.getInt("id"),
+								 rs.getString("order_number"), 
 								 rs.getString("today"), 
 								 rs.getInt("quantity"), 
 								 rs.getDouble("total_price")));
@@ -48,6 +49,14 @@ public class Database {
 		
 		Iterator<Order> it = orders.iterator();
 		System.out.println("Lista ordini\n");
+		
+		while(it.hasNext()) {
+			Order order = it.next();
+			
+			System.out.println(order.toString() + "\n");
+		}
+		
+		orders.get(0).setOrderNumber("BBBBBBB12");
 		
 		while(it.hasNext()) {
 			Order order = it.next();

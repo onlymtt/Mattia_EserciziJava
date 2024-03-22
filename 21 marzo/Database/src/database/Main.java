@@ -12,6 +12,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Database db = new Database();
 		db.test();
+		db.orders.get(0).setOrderNumber("BBBBB123");
 	}
 
 }
