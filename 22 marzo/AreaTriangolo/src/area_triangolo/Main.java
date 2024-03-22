@@ -9,7 +9,7 @@ public class Main {
 		
 		//calcolo da array
 ;		Triangolo triangolo = new Triangolo(areaArray);
-		int area = triangolo.calcola();
+		double area = triangolo.calcola();
 		System.out.println(area);
 		
 		

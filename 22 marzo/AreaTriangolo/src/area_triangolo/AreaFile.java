@@ -7,19 +7,18 @@ import java.io.IOException;
 public class AreaFile implements AreaInterface {
 
 	@Override
-	public int calcolaArea() {
+	public double calcolaArea() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("testo.txt"));
 		
-			String linea;
 			
 			
 				String line = reader.readLine();
-	            int numero1 = Integer.parseInt(line);
+	            double numero1 = Double.parseDouble(line);
 	            
 
 	            line = reader.readLine();
-	            int numero2 = Integer.parseInt(line);
+	            double numero2 = Double.parseDouble(line);
 				
 	            
 	            reader.close();
