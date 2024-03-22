@@ -4,9 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * classe per calcolare l'area da un file, implementa l'interfaccia AreaInterface*/
 public class AreaFile implements AreaInterface {
 
 	@Override
+	/**
+	 * metodo per calcolare l'area leggendo da file
+	 * @return area ritorna l'area come double*/
 	public double calcolaArea() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("testo.txt"));

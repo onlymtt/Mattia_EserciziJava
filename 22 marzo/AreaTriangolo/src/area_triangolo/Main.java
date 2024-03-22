@@ -2,10 +2,11 @@ package area_triangolo;
 
 import java.sql.SQLException;
 /**
- * Entrypoint del software 
- * @param args argomenti del main*/
+ * classe main*/
 public class Main {
-
+	/**
+	 * Entrypoint del software 
+ * @param args argomenti del main*/
 	public static void main(String[] args) {
 		
 		try {
@@ -15,7 +16,7 @@ public class Main {
 			 
 			
 			//calcolo da array
-;		Triangolo triangolo = new Triangolo(areaArray);
+;			Triangolo triangolo = new Triangolo(areaArray);
 			double area = triangolo.calcola();
 			System.out.println(area);
 			

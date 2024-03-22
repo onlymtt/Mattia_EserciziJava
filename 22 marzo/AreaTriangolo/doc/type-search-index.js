@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"area_triangolo","l":"AreaArray"},{"p":"area_triangolo","l":"AreaDb"},{"p":"area_triangolo","l":"AreaFile"},{"p":"area_triangolo","l":"AreaInterface"},{"p":"area_triangolo","l":"Main"},{"p":"area_triangolo","l":"Triangolo"}];updateSearchResults();
