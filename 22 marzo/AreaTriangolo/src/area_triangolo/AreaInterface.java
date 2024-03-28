@@ -5,6 +5,6 @@ public interface AreaInterface {
 
 	/**
 	 * firma del metodo da implementare
-	 * @return double ritorna un double*/
+	 * @return ritorna un double*/
 	double calcolaArea();
 }

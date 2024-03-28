@@ -24,7 +24,7 @@ public class AreaDb implements AreaInterface{
 	@Override
 	/**
 	 * metodo per eseguire la query, salvare i valori in un array e calcolare l'area
-	 * @return area ritorna l'area come double o 0 se il try catch fallisce*/
+	 * @return ritorna l'area come double o 0 se il try catch fallisce*/
 	public double calcolaArea() {
 		ResultSet rs;
 		

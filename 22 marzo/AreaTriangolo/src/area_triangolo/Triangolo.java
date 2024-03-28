@@ -17,7 +17,7 @@ public class Triangolo {
 
 	/**
 	 * metodo che richiama il metodo dell'interfaccia, si specializzerà dopo
-	 * @return area calcola l'area come double*/
+	 * @return calcola l'area come double*/
 	public double calcola() {
 		
 		return this.area.calcolaArea();

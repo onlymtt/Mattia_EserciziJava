@@ -8,7 +8,7 @@ public class AreaArray implements AreaInterface{
 	@Override
 	/**
 	 * metodo ereditato, calcola l'area da un array
-	 * @return area ritorna l'area come double*/
+	 * @return ritorna l'area come double*/
 	public double calcolaArea() {
 		System.out.println("Area calcolata da array");
 		return (array[0] * array[1])/2;
