@@ -43,7 +43,7 @@ public class CifrarioDiCesare {
         StringBuilder risultato = new StringBuilder();
 
         for (char carattere : testo.toCharArray()) {
-            if(DIZIONARIO.indexOf(carattere) != 1) {
+            if(DIZIONARIO.indexOf(carattere) != -1) {
                 int posizioneOriginale = DIZIONARIO.indexOf(carattere);
                 int nuovaPosizione = (DIZIONARIO.length() + posizioneOriginale + shift ) % DIZIONARIO.length(); //Effetto supermario
                 risultato.append(DIZIONARIO.charAt(nuovaPosizione));
