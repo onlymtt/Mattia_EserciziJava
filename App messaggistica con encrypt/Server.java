@@ -89,9 +89,16 @@ public class Server {
         }
 
         private void broadcast(String message) {
-            for (PrintWriter writer : clientWriters) {
-                writer.println(message);
+            // Verifica che il messaggio non sia null e non sia una stringa vuota
+            if (message != null && !message.trim().isEmpty()) {
+                for (PrintWriter writer : clientWriters) {
+                    writer.println(message);
+                }
+            } else {
+                // Puoi scegliere di loggare o di ignorare i messaggi nulli o vuoti
+                System.out.println("Tentativo di inviare un messaggio vuoto o null.");
             }
         }
+        
     }
 }
