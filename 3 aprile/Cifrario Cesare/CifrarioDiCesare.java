@@ -13,7 +13,7 @@ public class CifrarioDiCesare {
             Scanner sc = new Scanner(System.in);
             Scanner sc1 = new Scanner(System.in);
             int modalita = sc.nextInt();
-            System.out.println("Inserisci la parola\n");
+            System.out.println("Inserisci la parola");
             String messaggio = sc1.nextLine();
             System.out.println("Di quanto vuoi shiftare?");
             int shift = sc.nextInt();
