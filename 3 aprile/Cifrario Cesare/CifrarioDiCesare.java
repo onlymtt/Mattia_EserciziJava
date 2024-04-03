@@ -46,7 +46,6 @@ public class CifrarioDiCesare {
             if(DIZIONARIO.indexOf(carattere) != 1) {
                 int posizioneOriginale = DIZIONARIO.indexOf(carattere);
                 int nuovaPosizione = (DIZIONARIO.length() + posizioneOriginale + shift ) % DIZIONARIO.length(); //Effetto supermario
-                //int nuovaPosizione = posizioneOriginale + shift;
                 risultato.append(DIZIONARIO.charAt(nuovaPosizione));
             } else {
                 risultato.append(carattere);
